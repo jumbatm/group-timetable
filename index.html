@@ -14,6 +14,21 @@
   </head>
   <body>
     <p>Hello world!</p>
+		
+		<p id="test"></p>
+		<script>
+		var seconds = 0;
+		var minutes = 0;
+		document.getElementById("test").innerHTML = "Elapsed: "+minutes.toString()+" minutes "+seconds.toString()+" seconds";
+		setInterval(function () {
+			seconds++;
+			if(seconds>=60){
+				seconds = 0;
+				minutes++;
+			}
+			document.getElementById("test").innerHTML = "Elapsed: "+minutes.toString()+" minutes "+seconds.toString()+" seconds";
+		}, 1000);
+		</script>
 
   </body>
 </html>
