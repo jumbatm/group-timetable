@@ -5,7 +5,17 @@
   <body>
     <b>Hello world!</b>
     <p id="counter">Loading button click data.</p>
-    <button id="myButton">Click me!</button>
+ 
+    <button onclick="mFunction()">INPUT TXT</button>
+
+<script>
+function mFunction() {
+  var x = document.createElement("INPUT");
+  x.setAttribute("type", "text");
+  x.setAttribute("value", "Hello World!");
+  document.body.appendChild(x);
+}
+</script>
   </body>
   <script src="buttonclient.js"></script>
 
