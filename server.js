@@ -12,13 +12,18 @@ app.set('view engine', 'pug');
 
 
 app.get('/', function(req, res){
-  res.render('index', { title: 'Hey', message: 'Hello there!' })
-})
-/*
-app.get('/:sessionId', function (req, res) {
-  res.send(req.params);
+  res.render('index', { 
+    url: "http://localhost:3000/dynamic_view"
+  });
 });
-*/
+
+// http://localhost:3000/dynamic_view
+app.get('/dynamic_view', function(req, res){
+  res.render('dynamic', {
+     url:"http://google.com"
+  });
+});
+
 
 app.listen(port, () => {
   console.log("Example app listening on port " + port)
