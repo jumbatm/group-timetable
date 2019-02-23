@@ -3,17 +3,23 @@
 var express = require('express');
 var app = express();
 const port = 3000;
-
-// putting image in body
-app.use(express.static(__dirname));
+app.set('view engine', 'pug');
 
 
-app.get('/', (req, res) => res.send('Hello world!'));
 
+// serving static files, such as index.html
+//app.use(express.static(__dirname));
+
+
+app.get('/', function(req, res){
+  res.render('index', { title: 'Hey', message: 'Hello there!' })
+})
 /*
 app.get('/:sessionId', function (req, res) {
   res.send(req.params);
 });
 */
 
-app.listen(port, () => console.log("Example app listening on port ${port} !"));
+app.listen(port, () => {
+  console.log("Example app listening on port " + port)
+});
