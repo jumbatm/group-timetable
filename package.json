@@ -1,24 +1,16 @@
 {
   "name": "group-timetable",
-  "version": "1.0.0",
-  "description": "This is a scheduler project for us to learn how to do webapp application.",
-  "main": "index.js",
-  "dependencies": {
-    "express": "^4.16.4",
-    "pug": "^2.0.3"
-  },
-  "devDependencies": {},
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jumbatm/group-timetable.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jumbatm/group-timetable/issues"
-  },
-  "homepage": "https://github.com/jumbatm/group-timetable#readme"
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
+    "pug": "^2.0.3"
+  }
 }
