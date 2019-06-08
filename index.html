@@ -10,13 +10,24 @@
         font-size: 28px;
         font-family: Arial, Helvetica, sans-serif;
       }
+			
+			table {
+				border: 1px solid black;
+				table-layout: fixed;
+				width: 75%;
+			}
+			th, td {
+				border: 1px solid black;
+				width: 100%;
+			}
       </style>
   </head>
   <body>
-    <p>Hello world!</p>
+    <h1 style="font-family:courier;">Group Timetable</h1>
+		<p style="font-family:courier;font-size:60%;"> This timetable is to provide a collaborative environment for group members to find common available times.</p>
 		
 		<!-- A timer that records the time spent on the website -->
-		<center id="test"></center>
+		<p ALIGN=RIGHT id="test" style="font-family:courier;font-size:60%"></p>
 		<script>
 		var seconds = 0;
 		var minutes = 0;
@@ -30,6 +41,41 @@
 			document.getElementById("test").innerHTML = "Elapsed: "+minutes.toString()+" minutes "+seconds.toString()+" seconds";
 		}, 1000);
 		</script>
+		
+		<br>
+		
+		<!-- A table that can be used for calender purpose. Likely to reject this though, very ugly -->
+		<table align="center">
+			<tr>
+				<th>Time</th>
+				<th>Monday</th>
+				<th>Tuesday</th>
+				<th>Wednesday</th>
+				<th>Thursday</th>
+				<th>Friday</th>
+				<th>Saturday</th>
+				<th>Sunday</th>
+			</tr>
+				<th>06:00-08:00</th>
+				<td>a</td>
+				<td>b</td>
+				<td>c</td>
+				<td>d</td>
+				<td>e</td>
+				<td>f</td>
+				<td>g</td>
+			<tr>
+				<th>08:00-10:00</th>
+				<td>a</td>
+				<td>b</td>
+				<td>c</td>
+				<td>d</td>
+				<td>e</td>
+				<td>f</td>
+				<td>g</td>
+			</tr>
+		</table>
+		
 
   </body>
 </html>
